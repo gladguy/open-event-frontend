@@ -34,30 +34,23 @@ export default class extends Controller.extend(EmberTableControllerMixin) {
         valuePath       : 'startsAt',
         extraValuePaths : ['endsAt'],
         isSortable      : true,
+        width           : 170,
         headerComponent : 'tables/headers/sort',
         cellComponent   : 'ui-table/cell/cell-event-date'
 
       },
       {
         name          : 'Sessions',
-        valuePath     : 'eventStatisticsGeneral',
+        valuePath     : 'generalStatistics',
         width         : 90,
         isSortable    : false,
         cellComponent : 'ui-table/cell/cell-sessions-dashboard'
       },
       {
         name          : 'Speakers',
-        valuePath     : 'eventStatisticsGeneral',
+        valuePath     : 'generalStatistics',
         cellComponent : 'ui-table/cell/cell-speakers-dashboard',
         isSortable    : false
-
-      },
-      {
-        name          : 'Tickets',
-        valuePath     : 'tickets',
-        cellComponent : 'ui-table/cell/cell-tickets',
-        isSortable    : false
-
       },
       {
         name          : 'Public URL',
